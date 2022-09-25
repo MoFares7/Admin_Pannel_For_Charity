@@ -14,22 +14,22 @@ class SideMenu extends StatelessWidget {
         child: Column(
           children: [
             DrawerHeader(child: Image.asset("assets/images/k.png")),
-            DrawerListTitle(
+            DrawerListTile(
               title: "Home",
               svgSrc: "assets/icons/home.svg",
               press: () {},
             ),
-            DrawerListTitle(
+            DrawerListTile(
               title: "User",
               svgSrc: "assets/icons/User.svg",
               press: () {},
             ),
-            DrawerListTitle(
+            DrawerListTile(
               title: "Camaign",
               svgSrc: "assets/icons/camigan.svg",
               press: () {},
             ),
-            DrawerListTitle(
+            DrawerListTile(
               title: "Settings",
               svgSrc: "assets/icons/settings.svg",
               press: () {},
@@ -41,9 +41,10 @@ class SideMenu extends StatelessWidget {
   }
 }
 
-class DrawerListTitle extends StatelessWidget {
-  const DrawerListTitle({
+class DrawerListTile extends StatelessWidget {
+  const DrawerListTile({
     Key? key,
+    // For selecting those three line once press "Command+D"
     required this.title,
     required this.svgSrc,
     required this.press,
@@ -55,16 +56,17 @@ class DrawerListTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      onTap: () {
-        press;
-      },
+      onTap: press,
       horizontalTitleGap: 0.0,
       leading: SvgPicture.asset(
         svgSrc,
-        color: Color.fromARGB(137, 12, 7, 7),
+        color: Colors.white54,
         height: 16,
       ),
-      title: Text(title),
+      title: Text(
+        title,
+        style: TextStyle(color: Colors.white54),
+      ),
     );
   }
 }

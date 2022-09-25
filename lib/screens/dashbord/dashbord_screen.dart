@@ -1,4 +1,3 @@
-
 import 'package:admin_pannel_for_charity/responsive.dart';
 import 'package:flutter/material.dart';
 import '../../contants.dart';
@@ -27,7 +26,7 @@ class DashboardScreen extends StatelessWidget {
                     children: [
                       const MyFiles(),
                       const SizedBox(height: defaultPadding),
-                      RecentFiles(),
+                      // RecentFiles(),
                       if (Responsive.isMobile(context))
                         const SizedBox(height: defaultPadding),
                       if (Responsive.isMobile(context)) const StarageDetails(),
