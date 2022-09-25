@@ -31,12 +31,12 @@ class ProfileCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(
+      padding: const EdgeInsets.symmetric(
           horizontal: defaultPadding, vertical: defaultPadding / 2),
-      margin: EdgeInsets.all(defaultPadding),
+      margin: const EdgeInsets.all(defaultPadding),
       decoration: BoxDecoration(
           color: secondaryColor,
-          borderRadius: BorderRadius.all(Radius.circular(10)),
+          borderRadius: const BorderRadius.all(Radius.circular(10)),
           border: Border.all(color: Colors.white10)),
       child: Row(
         children: [
@@ -44,7 +44,7 @@ class ProfileCard extends StatelessWidget {
             'assets/images/admin.jpg',
             height: 30,
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.symmetric(horizontal: defaultPadding / 2),
             child: Text('Mo Fares'),
           )
