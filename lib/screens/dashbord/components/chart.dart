@@ -1,7 +1,6 @@
+import 'package:admin_pannel_for_charity/contants.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-
-import '../../../contants.dart';
 
 class Chart extends StatelessWidget {
   const Chart({
@@ -26,7 +25,7 @@ class Chart extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(height: defaultPadding),
+                const SizedBox(height: defaultPadding),
                 Text(
                   "29.1",
                   style: Theme.of(context).textTheme.headline4!.copyWith(
@@ -35,7 +34,7 @@ class Chart extends StatelessWidget {
                         height: 0.5,
                       ),
                 ),
-                Text("")
+                const Text("of 128GB")
               ],
             ),
           ),
@@ -53,27 +52,27 @@ List<PieChartSectionData> paiChartSelectionDatas = [
     radius: 25,
   ),
   PieChartSectionData(
-    color: Color(0xFF26E5FF),
+    color: const Color(0xFF26E5FF),
     value: 20,
     showTitle: false,
-    radius: 25,
+    radius: 22,
   ),
   PieChartSectionData(
-    color: Color(0xFFFFCF26),
+    color: const Color(0xFFFFCF26),
     value: 10,
     showTitle: false,
-    radius: 25,
+    radius: 19,
   ),
   PieChartSectionData(
-    color: Color(0xFFEE2727),
-    value: 25,
+    color: const Color(0xFFEE2727),
+    value: 15,
     showTitle: false,
-    radius: 25,
+    radius: 16,
   ),
   PieChartSectionData(
     color: primaryColor.withOpacity(0.1),
     value: 25,
     showTitle: false,
-    radius: 25,
+    radius: 13,
   ),
 ];
